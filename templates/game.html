@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+<html>
+<body>
+
+<h1>Game</h1>
+<img src={{tries}}>
+
+<div>
+{% for i in to_display %}
+    <span> {{i}} </span>
+{% endfor %}
+</div>
+
+<form action="{{ url_for('add_char') }}" method=post>
+ <div>
+ <label>Enter a letter:</label>
+ <div>
+      <input type="text" maxlength="1" name="letter">
+ </div>
+ </div>
+ <p><button type="submit">Submit</button></p>
+</form>
+<div>
+ {% for i in word_set %}
+    <span>{{i}}</span>
+ {% endfor %}
+</div>
+
+</body>
+</html> 
